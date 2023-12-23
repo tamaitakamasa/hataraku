@@ -1,0 +1,410 @@
+// project/_p-home.scss
+
+@use "../global" as g;
+
+.box {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: red;
+}
+
+.p-home {
+  // .p-home-concept
+  &-concept {
+    @include g.mq(md) {
+      .c-container {
+        margin: 0;
+      }
+    }
+
+    &__cols {
+      position: relative;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      @include g.mq(md) {
+        padding-top: 100px;
+        flex-direction: row;
+      }
+    }
+
+    &__col-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+
+      @include g.mq(md) {
+        width: 100%;
+      }
+    }
+
+    &__col-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+
+      @include g.mq(md) {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      @include g.clamp(padding-top, 150, 75);
+      @include g.clamp(padding-bottom, 70, 35);
+      font-family: g.$font-dnp-shuei;
+      @include g.font-clamp("6xl", "4xl");
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      line-height: 1.5;
+      writing-mode: vertical-rl;
+
+      @include g.mq(md) {
+        padding-bottom: 0;
+      }
+    }
+
+    &__image1 {
+      aspect-ratio: 446 / 644;
+
+      &--sp {
+        display: none;
+      }
+
+      @include g.mq(md) {
+        display: none;
+
+        &--sp {
+          display: block;
+          margin-top: 20px;
+          margin-right: 40vw;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__image2 {
+      aspect-ratio: 642 / 884;
+
+      &--sp {
+        display: none;
+      }
+
+      @include g.mq(md) {
+        display: none;
+
+        &--sp {
+          position: relative;
+          z-index: -1;
+          top: -20px;
+          display: block;
+          margin-left: 15vw;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__text {
+      @include g.clamp(padding-top, 130, 65);
+      @include g.clamp(padding-bottom, 130, 65);
+
+      @include g.mq(md) {
+        padding-bottom: 40px;
+      }
+
+      p {
+        font-family: g.$font-dnp-shuei;
+        @include g.font-clamp("xl", "sm");
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        line-height: 2.25;
+      }
+    }
+
+    &__image3 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      aspect-ratio: 215 / 345;
+
+      @include g.mq(md) {
+        position: relative;
+        width: 33.3333%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // .p-home-feature
+  &-feature {
+    // display: none;
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      @include g.clamp(padding-top, 150, 75);
+      @include g.clamp(padding-bottom, 150, 75);
+    }
+
+    &__title {
+    }
+
+    &__items {
+      margin-right: g.$container-margin;
+      margin-left: g.$container-margin;
+			padding-bottom: 50vh;
+
+    }
+
+		&__item {
+			margin-top: 200px;
+		}
+  }
+
+  // .p-home-eyecatch
+  &-eyecatch {
+    // margin-top: 1500px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background-color: #ede8e1;
+      z-index: -1;
+    }
+
+    figure {
+      aspect-ratio: 16/9;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // .p-home-profile
+  &-profile {
+    display: flex;
+    align-items: center;
+    @include g.clamp(padding-top, 150, 75);
+    @include g.clamp(padding-bottom, 150, 75);
+    background-color: #ede8e1;
+
+    @include g.mq(md) {
+      flex-direction: column;
+    }
+
+    &__image {
+      width: 50%;
+      padding-right: 2vw;
+      aspect-ratio: 675 / 780;
+
+      @include g.mq(md) {
+        width: 60%;
+        // margin-right: 20vw;
+        // margin-left: 20vw;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__body {
+      width: 50%;
+      padding-right: g.$container-margin;
+      padding-left: 2vw;
+
+      @include g.mq(md) {
+        width: 100%;
+        padding-right: g.$container-margin-narrow;
+        padding-left: g.$container-margin-narrow;
+      }
+    }
+
+    &__name {
+      display: flex;
+      align-items: center;
+      font-family: g.$font-dnp-shuei;
+      font-weight: 400;
+      line-height: 1;
+
+      @include g.mq(md) {
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      &-title {
+        @include g.clamp(margin-right, 16, 12);
+        @include g.font-clamp("md", "sm");
+        letter-spacing: 0.3em;
+      }
+
+      &-name {
+        @include g.font-clamp("4xl", "2xl");
+        letter-spacing: 0.075em;
+      }
+    }
+
+    &__introduction {
+      @include g.clamp(margin-top, 65, 30);
+      @include g.clamp(font-size, 15, 14);
+      letter-spacing: 0.05em;
+      line-height: 2;
+    }
+
+    &__history {
+      @include g.clamp(margin-top, 65, 40);
+      @include g.clamp(padding-top, 65, 40);
+      border-top: 1px solid rgba($color: #000000, $alpha: 0.4);
+      font-size: g.$font-size-xs;
+      color: g.$color-main;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  // .p-home-product
+  &-product {
+    @include g.clamp(padding-top, 150, 75);
+    @include g.clamp(padding-bottom, 150, 75);
+
+    .c-container {
+      display: flex;
+
+      @include g.mq(md) {
+        flex-direction: column;
+      }
+    }
+
+    &__title {
+      width: 15%;
+
+      @include g.mq(md) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    &__body {
+      width: 85%;
+
+      @include g.mq(md) {
+        width: 100%;
+      }
+    }
+
+    &__item-direct {
+      @include g.clamp(margin-bottom, 140, 70);
+    }
+
+    &__item-online {
+      display: flex;
+      @include g.clamp(gap, 70, 35);
+
+      @include g.mq(md) {
+        flex-direction: column;
+        gap: 75px;
+      }
+
+      & > div {
+        width: 50%;
+
+        @include g.mq(md) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      @include g.clamp(margin-top, 70, 35);
+    }
+  }
+
+  // .p-home-news
+  &-news {
+    position: relative;
+    @include g.clamp(padding-top, 150, 75);
+    @include g.clamp(padding-bottom, 150, 75);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      background-color: #ede8e1;
+      z-index: -1;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-ja {
+      }
+
+      &-en {
+        @include g.clamp(margin-top, 40, 20);
+        font-family: g.$font-dnp-shuei;
+        @include g.font-clamp("md", "sm");
+        font-weight: 400;
+        color: g.$color-main;
+        letter-spacing: 0.075em;
+        line-height: 1;
+      }
+    }
+
+    &__body {
+      @include g.clamp(margin-top, 70, 35);
+      padding-left: 15vw;
+      overflow: hidden;
+
+      @include g.mq(md) {
+        padding-left: 0;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      @include g.clamp(margin-top, 70, 35);
+
+      @include g.mq(md) {
+        margin-right: g.$container-margin-narrow;
+        margin-left: g.$container-margin-narrow;
+      }
+    }
+  }
+}

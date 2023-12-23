@@ -1,0 +1,112 @@
+// component/_c-product.scss
+
+@use "../global" as g;
+
+.c-product {
+  $this: &;
+
+  &__header {
+    position: relative;
+
+    @include g.mq(md) {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__cols {
+    display: flex;
+    align-items: center;
+    @include g.clamp(gap, 70, 35);
+
+    @include g.mq(md) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__col-left {
+    width: 50%;
+
+    @include g.mq(md) {
+      width: 100%;
+    }
+  }
+
+  &__col-right {
+    width: 50%;
+
+    @include g.mq(md) {
+      width: 100%;
+    }
+  }
+
+  &__category {
+    position: absolute;
+    top: -30px;
+    @include g.clamp(left, 40, 20);
+    @include g.clamp(padding-top, 20, 10);
+    @include g.clamp(padding-bottom, 20, 10);
+    @include g.clamp(padding-right, 15, 12);
+    @include g.clamp(padding-left, 15, 12);
+    border-radius: 9999px;
+    border: 1px solid g.$color-main;
+    font-family: g.$font-dnp-shuei;
+    @include g.font-clamp("lg", "xs");
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    writing-mode: vertical-rl;
+    color: g.$color-main;
+    line-height: 1;
+
+    @at-root #{$this}--direct & {
+      border-color: g.$color-sub;
+      color: g.$color-sub;
+    }
+
+    @include g.mq(md) {
+      top: -15px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &__image {
+    aspect-ratio: 400 / 500;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    @include g.clamp(margin-top, 36, 28);
+    font-family: g.$font-dnp-shuei;
+    @include g.font-clamp("4xl", "2xl");
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+
+  &__description {
+    @include g.clamp(margin-top, 36, 18);
+    // font-family: g.$font-dnp-shuei;
+    @include g.font-clamp("sm", "xs");
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  &__btn {
+    a {
+      // display: flex;
+      // justify-content: center;
+      @include g.clamp(margin-top, 36, 24);
+      // border: 1px solid g.$color-main;
+      // border-radius: 10px;
+      // color: g.$color-main;
+    }
+  }
+
+}

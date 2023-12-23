@@ -1,0 +1,7 @@
+// layout/_l-body.scss
+
+@use "../global"as g;
+
+.l-body {
+    $this: &;
+}

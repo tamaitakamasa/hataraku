@@ -1,0 +1,14 @@
+{
+  "data": {
+    "header": {
+      "index": {
+        "title": "Home",
+        "description": "ホームですよ。"
+      },
+      "sample": {
+        "title": "Sample",
+        "description": "サンプルページですよ。"
+      }
+    }
+  }
+}
