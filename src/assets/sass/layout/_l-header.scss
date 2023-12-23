@@ -18,10 +18,14 @@
 
   &__logo {
     figure {
-      width: 180px;
+      width: 100px;
 			opacity: 1;
 			scale: 1;
 			transition: all 0.3s ease-in-out;
+
+			@at-root :has(.p-home) & {
+				width: 180px;
+			}
 
 			@at-root #{$this}--scrolled & {
 				opacity: 0;

@@ -6,17 +6,14 @@
   $this: &;
 
   background-color: #f3f5f6;
+	padding-top: 250px;
+	@include g.clamp(padding-bottom, 150, 75);
 
-  &__header {
-    height: 100vh;
-    @include g.mq(md) {
-      padding-top: 100px;
-    }
-
-    @at-root .home & {
-      padding-top: 0 !important;
-    }
-  }
+	@at-root .home & {
+		// margin-top: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 
   &__body {
     position: relative;

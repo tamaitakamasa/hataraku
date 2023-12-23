@@ -355,7 +355,7 @@
   &-news {
     position: relative;
     @include g.clamp(padding-top, 150, 75);
-    @include g.clamp(padding-bottom, 150, 75);
+    // @include g.clamp(padding-bottom, 150, 75);
 
     &::before {
       content: "";
