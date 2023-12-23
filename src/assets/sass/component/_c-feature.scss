@@ -1,6 +1,6 @@
 // component/_c-feature.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 .c-feature {
   position: relative;
@@ -40,7 +40,7 @@
     @include g.font-clamp("4xl", "2xl");
     font-weight: 400;
     letter-spacing: 0.075em;
-    line-height: 1;
+    line-height: 1.6;
   }
 
   &__description {
@@ -63,7 +63,8 @@
 
     img {
       width: auto;
-      transition: transform 0.5s linear; /* スムーズなトランジション */
+      transition: transform 0.5s linear;
+      /* スムーズなトランジション */
       // transition: transform 0.5s ease-in-out;
     }
   }
