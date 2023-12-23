@@ -6,7 +6,7 @@
   $this: &;
 
   background-color: #f3f5f6;
-	padding-top: 250px;
+	padding-top: 150px;
 	@include g.clamp(padding-bottom, 150, 75);
 
 	@at-root .home & {

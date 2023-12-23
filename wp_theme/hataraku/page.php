@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -15,24 +16,33 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<div class="l-contents p-page p-page-<?php the_ID(); ?>">
+	<div class="p-page__header">
+		<div class="c-container">
+			<h2 class="p-page__title">
+				<div class="c-heading"><?php the_title(); ?></div>
+			</h2>
+		</div>
+	</div>
+	<!-- .p-page__header -->
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<div class="l-contents__body">
+		<main class="l-contents__main">
+			<!-- WP編集エリア ここから-->
+			<article class="p-page__content">
+				<div class="c-container">
+					<div class="c-article">
+						<?php the_content(); ?>
+					</div>
+				</div><!-- .c-article -->
+			</article><!-- .c-container -->
+			<!-- WP編集エリア ここまで-->
+		</main>
+	</div>
+	<!-- .l-contents__body -->
+</div>
+<!-- .l-contents -->
 
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

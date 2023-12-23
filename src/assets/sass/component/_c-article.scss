@@ -3,10 +3,6 @@
 @use "../global"as g;
 
 .c-article {
-    @include g.mq(md) {
-        padding-right: 5vw;
-        padding-left: 5vw;
-    }
 
     .c-container {
         max-width: inherit;
@@ -27,6 +23,7 @@
 
     h2 {
         @include g.font-clamp("3xl", "lg");
+				font-weight: 500;
         letter-spacing: 0.05em;
         line-height: 1.4;
     }
