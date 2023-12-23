@@ -105,8 +105,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+# tamai add
 .DS_Store
 package.json
-public/index.html
-public/index.html
-public/privacy.html
+public/**/*.css
+public/**/*.html
+style.css.map
