@@ -1,14 +1,15 @@
 // layout/_l-contents.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 .l-contents {
   $this: &;
 
-  background-color: #f3f5f6;
+  background-color: #f7f5f2;
 
   &__header {
     height: 100vh;
+
     @include g.mq(md) {
       padding-top: 100px;
     }
@@ -31,6 +32,7 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+
     @at-root .home & {
       margin-top: 0;
       padding-top: 0;
@@ -43,6 +45,7 @@
         padding-right: 0;
       }
     }
+
     @at-root .p-single & {
       // padding-right: g.$header-active-width;
 
