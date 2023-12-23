@@ -1,8 +1,0 @@
-// component/_c-container.scss
-
-@use "../global"as g;
-
-.c-container {
-	width: min(100% - 2rem, 70rem);
-  margin-inline: auto;
-}
