@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  /> -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "hmp1cas",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+
+  <body class="l-body">
+    <div class="l-container">
+      <header class="l-header">
+        <div class="c-container">
+          <h1 class="l-header__logo">
+            <figure>
+              <img
+                src="./assets/images/logo_v.svg"
+                alt="焼き芋農場 畑らく Yakiimo Farm HAYARAKU"
+              />
+            </figure>
+          </h1>
+          <div class="l-header__navi">
+            <div class="l-header__btn-shop">
+              <a class="c-btn c-btn--small" href="#">
+                <span class="c-btn__icon"
+                  ><i class="fa-light fa-cart-shopping"></i
+                ></span>
+                <span class="c-btn__label">ONLINE SHOP</span>
+              </a>
+            </div>
+            <div class="l-header__trigger js-trigger">
+              <div class="c-trigger">
+                <div class="c-trigger__inner">
+                  <span class="c-trigger__line"></span>
+                  <span class="c-trigger__line"></span>
+                  <span class="c-trigger__line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .c-container -->
+      </header>
+      <!-- .l-header -->
+      <div class="l-drawer">
+        <ul>
+          <li>
+            <a href="#feature"
+              >「未来を育てる焼き芋」がみなさんの元に届くまで</a
+            >
+          </li>
+          <li><a href="#product">商品一覧</a></li>
+          <li><a href="#news">お知らせ</a></li>
+        </ul>
+      </div>
+      <!-- .l-drawer -->
+
+      <div class="l-contents p-page">
+        <div class="p-page__header">
+          <div class="c-container">
+            <h2 class="p-page__title">プライバシーポリシー</h2>
+          </div>
+        </div>
+        <div class="l-contents__body">
+          <div class="c-container">ここにコンテンツが入ります。</div>
+        </div>
+        <!-- .l-contents__body -->
+      </div>
+      <!-- .l-contents -->
+
+      <footer class="l-footer">
+        <div class="c-container">
+          <div class="l-footer__inner">
+            <div class="l-footer__company">
+              <figure>
+                <img
+                  src="https://placehold.jp/300x150.png"
+                  alt="焼き芋農場 畑らく Yakiimo Farm HAYARAKU"
+                />
+              </figure>
+              <p>
+                株式会社畑楽<br />
+                〒989-2201<br />宮城県亘理郡山元町山寺北泥沼85-24
+              </p>
+            </div>
+            <div class="l-footer__navi">
+              <ul class="l-footer__navi-main">
+                <li>
+                  <a href="#"
+                    >「未来を育てる焼き芋」が<br />みなさんの元に届くまで</a
+                  >
+                </li>
+                <li><a href="#">商品一覧</a></li>
+                <li><a href="#">お知らせ</a></li>
+              </ul>
+              <ul class="l-footer__navi-sub">
+                <ul>
+                  <li>
+                    <a href="https://www.instagram.com/hataraku_official/"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/farm.hataraku"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                </ul>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="l-footer__copyright">©Yakiimo Farm HAYARAKU</div>
+        </div>
+        <!-- .c-container -->
+      </footer>
+      <!-- .l-footer -->
+    </div>
+    <!-- .l-container -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/756f562732.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "type": "module",
+  "name": "static-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "browser-sync start -s public",
+    "html:ejs": "ejs-cli -b src/assets/ejs/ '/**/*.ejs' -e 'components/' -o public/ -O data.json",
+    "html:prettier": "prettier --write public/**/*.html",
+    "build:html": "run-s html:ejs html:prettier reload",
+    "watch:html": "chokidar \"src/assets/ejs/\" --command \"npm run build:html\"",
+    "css:sass": "sass src/assets/sass:public/assets/css",
+    "css:postcss": "postcss public/assets/css/style.css --use autoprefixer cssnano -o public/assets/css/style.min.css",
+    "clean:css": "rimraf public/assets/css && mkdir -p public/assets/css",
+    "build:css": "npm run clean:css && run-s css:* reload",
+		"watch:css": "chokidar \"src/assets/sass/**/*\" --throttle --command \"npm run build:css\"",
+    "build": "run-p build:*",
+    "watch": "run-p watch:*",
+		"reload": "browser-sync reload",
+    "start": "run-p watch start:server"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.3",
+    "chokidar-cli": "^3.0.0",
+    "cpx": "^1.5.0",
+    "cssnano": "^6.0.1",
+    "ejs-cli": "^2.2.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "sass": "^1.62.1"
+  }
+}

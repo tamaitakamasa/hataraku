@@ -1,0 +1,57 @@
+// global/_variables.scss
+
+// ブレイクポイント指定（Tailwind CSSに合わせる）
+// 参考：https://tailwindcss.com/docs/breakpoints
+$breakpoints: (
+  "xs": 320px,
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "2xl": 1536px
+) !default;
+
+// フォントファミリー指定
+$font-base: "Noto Sans JP", sans-serif;
+$font-dnp-shuei: dnp-shuei-mincho-pr6n, sans-serif;
+
+// フォントサイズ指定（Tailwind CSSに合わせる）
+// 参考：https://tailwindcss.com/docs/font-size
+$font-sizes: (
+  "xs": 0.75rem,
+  "sm": 0.875rem,
+  "md": 1rem,
+  "lg": 1.125rem,
+  "xl": 1.25rem,
+  "2xl": 1.5rem,
+  "3xl": 1.875rem,
+  "4xl": 2.25rem,
+  "5xl": 3rem,
+  "6xl": 3.75rem,
+  "7xl": 4.5rem,
+  "8xl": 6rem,
+  "9xl": 8rem
+);
+$font-size-xs: map-get($font-sizes, "xs"); /* 12px */
+$font-size-sm: map-get($font-sizes, "sm"); /* 14px */
+$font-size-md: map-get($font-sizes, "md"); /* 16px */
+$font-size-lg: map-get($font-sizes, "lg"); /* 18px */
+$font-size-xl: map-get($font-sizes, "xl"); /* 20px */
+$font-size-2xl: map-get($font-sizes, "2xl"); /* 24px */
+$font-size-3xl: map-get($font-sizes, "3xl"); /* 30px */
+$font-size-4xl: map-get($font-sizes, "4xl"); /* 36px */
+$font-size-5xl: map-get($font-sizes, "5xl"); /* 48px */
+$font-size-6xl: map-get($font-sizes, "6xl"); /* 60px */
+$font-size-7xl: map-get($font-sizes, "7xl"); /* 72px */
+$font-size-8xl: map-get($font-sizes, "8xl"); /* 96px */
+$font-size-9xl: map-get($font-sizes, "9xl"); /* 128px */
+
+// カラー指定
+$color-main: #a40b5d;
+$color-sub : #23630d;
+$color-dark: #585348;
+$color-text: #282828;
+
+// コンテナ幅指定
+$container-margin: 8vw;
+$container-margin-narrow: 5vw;
