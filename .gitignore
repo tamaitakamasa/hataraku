@@ -107,3 +107,6 @@ dist
 .tern-port
 .DS_Store
 package.json
+public/index.html
+public/index.html
+public/privacy.html
