@@ -200,71 +200,68 @@ get_header();
 				</div>
 				<div class="p-home-product__body">
 					<div class="p-home-product__item-direct">
-						<div class="c-product c-product--direct">
-							<div class="c-product__cols">
-								<div class="c-product__col-left">
-									<div class="c-product__header">
-										<div class="c-product__category">直売所</div>
-										<div class="c-product__image">
-											<img src="https://placehold.jp/400x500.png" alt="石焼き芋" />
+						<?php if (have_rows('d_product', 'option')) : ?>
+							<?php while (have_rows('d_product', 'option')) : the_row(); ?>
+								<div class="c-product c-product--direct">
+									<div class="c-product__cols">
+										<div class="c-product__col-left">
+											<div class="c-product__header">
+												<div class="c-product__category">直売所</div>
+												<div class="c-product__image">
+													<?php
+													$image = get_sub_field('d_product_image');
+													if ($image) : ?>
+														<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+													<?php else : ?>
+														<img src="https://placehold.jp/400x500.png" alt="Placeholder" />
+													<?php endif; ?>
+												</div>
+											</div>
+										</div>
+										<div class="c-product__col-right">
+											<div class="c-product__title"><?php the_sub_field('d_product_name'); ?></div>
+											<div class="c-product__description"><?php the_sub_field('d_product_description'); ?></div>
+											<div class="c-product__btn">
+												<a class="c-btn c-btn--green" href="<?php the_sub_field('d_product_link_url'); ?>">
+													<span class="c-btn__icon"><i class="fa-light fa-calendar"></i></span>
+													<span class="c-btn__label"><?php the_sub_field('d_product_link_text'); ?></span>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="c-product__col-right">
-									<div class="c-product__title">石焼き芋</div>
-									<div class="c-product__description">
-										商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。
+								<!-- .c-product -->
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
+					<div class="p-home-product__item-online">
+						<?php if (have_rows('o_product', 'option')) : ?>
+							<?php while (have_rows('o_product', 'option')) : the_row(); ?>
+								<div class="c-product c-product--online">
+									<div class="c-product__header">
+										<div class="c-product__category">ONLINE SHOP</div>
+										<div class="c-product__image">
+											<?php
+											$image = get_sub_field('o_product_image');
+											if ($image) : ?>
+												<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+											<?php else : ?>
+												<img src="https://placehold.jp/400x500.png" alt="Placeholder" />
+											<?php endif; ?>
+										</div>
 									</div>
+									<div class="c-product__title"><?php the_sub_field('o_product_name'); ?></div>
+									<div class="c-product__description"><?php the_sub_field('o_product_description'); ?></div>
 									<div class="c-product__btn">
-										<a class="c-btn c-btn--green" href="#">
-											<span class="c-btn__icon"><i class="fa-light fa-calendar"></i></span>
-											<span class="c-btn__label">販売スケジュール</span>
+										<a class="c-btn c-btn" href="<?php the_sub_field('o_product_link_url'); ?>">
+											<span class="c-btn__icon"><i class="fa-light fa-cart-shopping"></i></span>
+											<span class="c-btn__label"><?php the_sub_field('o_product_link_text'); ?></span>
 										</a>
 									</div>
 								</div>
-							</div>
-						</div>
-						<!-- .c-product -->
-					</div>
-					<div class="p-home-product__item-online">
-						<div class="c-product c-product--online">
-							<div class="c-product__header">
-								<div class="c-product__category">ONLINE SHOP</div>
-								<div class="c-product__image">
-									<img src="https://placehold.jp/400x500.png" alt="冷やし焼き芋" />
-								</div>
-							</div>
-							<div class="c-product__title">冷やし焼き芋</div>
-							<div class="c-product__description">
-								商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。
-							</div>
-							<div class="c-product__btn">
-								<a class="c-btn c-btn" href="#">
-									<span class="c-btn__icon"><i class="fa-light fa-cart-shopping"></i></span>
-									<span class="c-btn__label">購入はこちら</span>
-								</a>
-							</div>
-						</div>
-						<!-- .c-product -->
-						<div class="c-product c-product--online">
-							<div class="c-product__header">
-								<div class="c-product__category">ONLINE SHOP</div>
-								<div class="c-product__image">
-									<img src="https://placehold.jp/400x500.png" alt="冷やし焼き芋" />
-								</div>
-							</div>
-							<div class="c-product__title">冷やし焼き芋</div>
-							<div class="c-product__description">
-								商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。商品についての説明が入ります。
-							</div>
-							<div class="c-product__btn">
-								<a class="c-btn c-btn" href="#">
-									<span class="c-btn__icon"><i class="fa-light fa-cart-shopping"></i></span>
-									<span class="c-btn__label">購入はこちら</span>
-								</a>
-							</div>
-						</div>
-						<!-- .c-product -->
+								<!-- .c-product -->
+							<?php endwhile; ?>
+						<?php endif; ?>
 					</div>
 					<div class="p-home-product__btn">
 						<a class="c-btn c-btn--large" href="#">

@@ -249,3 +249,16 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * ACFのオプションページを有効化
+ */
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page(array(
+			'page_title' => '商品管理',
+			'menu_title' => '商品管理',
+			'menu_slug' => 'product-options',
+			'capability' => 'edit_posts',
+			'redirect' => false
+	));
+}
