@@ -1,6 +1,6 @@
 // component/_c-heading.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 .c-heading {
   $this: &;
@@ -9,7 +9,7 @@
   @include g.clamp(font-size, 55, 24);
   font-weight: 400;
   letter-spacing: 0.075em;
-  line-height: 1;
+  line-height: 1.4;
 
   &--vertical {
     writing-mode: vertical-rl;

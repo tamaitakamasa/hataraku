@@ -1,6 +1,6 @@
 // component/_c-btn.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 .c-btn {
   $this: &;
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   @include g.clamp(padding-top, 12, 12);
-  @include g.clamp(padding-bottom, 12, 12);
+  @include g.clamp(padding-bottom, 15, 15);
   border: 1px solid g.$color-main;
   border-radius: 5px;
   line-height: 1;
@@ -31,9 +31,9 @@
   }
 
   @at-root #{$this}--large {
-    @include g.clamp(padding-top, 15, 15);
+    @include g.clamp(padding-top, 20, 20);
     @include g.clamp(padding-right, 160, 80);
-    @include g.clamp(padding-bottom, 15, 15);
+    @include g.clamp(padding-bottom, 23, 23);
     @include g.clamp(padding-left, 160, 80);
     background-color: g.$color-main;
     border-radius: 8px;
