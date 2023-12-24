@@ -26,18 +26,18 @@ get_header();
 							未来を<br />育てる<br />焼き芋
 						</h1>
 						<figure class="p-home-concept__image1">
-							<img src="https://placehold.jp/446x644.png" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/concept02.webp" />
 						</figure>
 						<figure class="p-home-concept__image2 p-home-concept__image2--sp">
-							<img src="https://placehold.jp/642x884.png" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/concept01.webp" />
 						</figure>
 					</div>
 					<div class="p-home-concept__col-right">
 						<figure class="p-home-concept__image1 p-home-concept__image1--sp">
-							<img src="https://placehold.jp/446x644.png" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/concept02.webp" />
 						</figure>
 						<figure class="p-home-concept__image2">
-							<img src="https://placehold.jp/642x884.png" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/concept01.webp" />
 						</figure>
 						<div class="p-home-concept__text">
 							<p>
@@ -60,7 +60,7 @@ get_header();
 						</div>
 					</div>
 					<figure class="p-home-concept__image3">
-						<img src="https://placehold.jp/215x345.png" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/concept03.webp" />
 					</figure>
 				</div>
 			</div>
@@ -86,8 +86,8 @@ get_header();
 							</div>
 						</div>
 						<figure class="c-feature__images">
-							<img src="https://placehold.jp/550x800.png" alt="" />
-							<img src="https://placehold.jp/240x320.png" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature01_1.webp" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature01_2.webp" alt="" />
 						</figure>
 					</div>
 				</div>
@@ -103,8 +103,8 @@ get_header();
 							</div>
 						</div>
 						<figure class="c-feature__images">
-							<img src="https://placehold.jp/240x320.png" alt="" />
-							<img src="https://placehold.jp/550x800.png" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature02_1.webp" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature02_2.webp" alt="" />
 						</figure>
 					</div>
 				</div>
@@ -123,8 +123,8 @@ get_header();
 							</div>
 						</div>
 						<figure class="c-feature__images">
-							<img src="https://placehold.jp/550x800.png" alt="" />
-							<img src="https://placehold.jp/240x320.png" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature03_1.webp" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature03_2.webp" alt="" />
 						</figure>
 					</div>
 				</div>
@@ -143,8 +143,8 @@ get_header();
 							</div>
 						</div>
 						<figure class="c-feature__images">
-							<img src="https://placehold.jp/240x320.png" alt="" />
-							<img src="https://placehold.jp/550x800.png" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature04_1.webp" alt="" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/feature04_2.webp" alt="" />
 						</figure>
 					</div>
 				</div>
@@ -157,7 +157,7 @@ get_header();
 		<div class="p-home-eyecatch">
 			<div class="c-container">
 				<figure>
-					<img src="https://placehold.jp/1600x900.png" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eyecatch.webp" />
 				</figure>
 			</div>
 			<!-- .c-container -->
@@ -166,7 +166,7 @@ get_header();
 
 		<div class="p-home-profile">
 			<figure class="p-home-profile__image">
-				<img src="https://placehold.jp/675x780.png" alt="" />
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/profile.webp" alt="" />
 			</figure>
 			<div class="p-home-profile__body">
 				<p class="p-home-profile__name">
@@ -212,8 +212,6 @@ get_header();
 													$image = get_sub_field('d_product_image');
 													if ($image) : ?>
 														<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-													<?php else : ?>
-														<img src="https://placehold.jp/400x500.png" alt="Placeholder" />
 													<?php endif; ?>
 												</div>
 											</div>
@@ -245,8 +243,6 @@ get_header();
 											$image = get_sub_field('o_product_image');
 											if ($image) : ?>
 												<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-											<?php else : ?>
-												<img src="https://placehold.jp/400x500.png" alt="Placeholder" />
 											<?php endif; ?>
 										</div>
 									</div>

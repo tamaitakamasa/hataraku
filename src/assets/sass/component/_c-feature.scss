@@ -57,7 +57,7 @@
 
     @include g.mq(md) {
       width: 100%;
-      flex-direction: column;
+      flex-direction: row;
       gap: 0;
     }
 
