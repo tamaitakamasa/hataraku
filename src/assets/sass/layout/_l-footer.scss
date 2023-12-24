@@ -8,7 +8,7 @@
   z-index: 1;
 
   @include g.clamp(padding-top, 150, 75);
-  @include g.clamp(padding-bottom, 150, 75);
+  @include g.clamp(padding-bottom, 150, 45);
   background-color: #e3dcd1;
 
   @include g.mq(lg) {
@@ -33,6 +33,11 @@
   &__company {
     figure {
       aspect-ratio: 296/151;
+
+      @include g.mq(md) {
+        width: 50%;
+        margin: 0 auto;
+      }
     }
 
     figure img {
@@ -41,7 +46,7 @@
     }
 
     p {
-      @include g.clamp(margin-top, 80, 40);
+      @include g.clamp(margin-top, 80, 20);
       // font-size: g.$font-size-xs;
       font-size: 11px;
       text-align: center;
@@ -55,6 +60,7 @@
 
     @include g.mq(md) {
       flex-direction: column;
+      margin-top: 50px;
     }
 
     &-main {
@@ -65,7 +71,7 @@
 
       &>li {
         font-family: g.$font-dnp-shuei;
-        @include g.font-clamp("md", "sm");
+        @include g.font-clamp("md", "md");
         font-weight: 600;
         letter-spacing: 0.075em;
       }
@@ -75,7 +81,7 @@
       &>ul {
         display: flex;
         @include g.clamp(gap, 20, 10);
-        @include g.clamp(margin-bottom, 40, 30);
+        @include g.clamp(margin-bottom, 40, 0);
         @include g.font-clamp("xl", "lg");
       }
 
@@ -84,6 +90,10 @@
         font-size: g.$font-size-sm;
         font-weight: 600;
         letter-spacing: 0.075em;
+
+        @include g.mq(md) {
+          font-family: 12px;
+        }
       }
     }
   }
@@ -93,5 +103,10 @@
     font-size: 11px;
     text-align: right;
     letter-spacing: 0.075em;
+
+    @include g.mq(md) {
+      text-align: center;
+      margin-top: 50px;
+    }
   }
 }
