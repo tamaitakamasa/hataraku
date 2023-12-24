@@ -37,6 +37,7 @@
     // position: absolute;
     font-family: g.$font-dnp-shuei;
     @include g.font-clamp("4xl", "lg");
+		@include g.clamp(padding-right, 40, 20);
     font-weight: 400;
     letter-spacing: 0.075em;
     line-height: 1.4;

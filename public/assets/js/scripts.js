@@ -71,10 +71,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         end: "bottom 300px", // アニメーションが終わる位置を指定（トリガー要素の位置 画面の位置）
         onEnter: () => {
           // console.log("enter!");
-          // gsap.to(leftColumn, {
-          //   duration: 1,
-          //   autoAlpha: 1
-          // });
         },
         onLeave: () => {
           gsap.to(leftColumn, {
@@ -121,6 +117,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           }
         );
       });
+    } else {
     }
   });
 });
