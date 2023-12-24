@@ -10,6 +10,7 @@
 	@include g.clamp(padding-bottom, 150, 75);
 
 	@at-root :has(.p-home) & {
+		padding-top: 0;
 		padding-bottom: 0;
 	}
 
