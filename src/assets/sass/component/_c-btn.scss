@@ -48,9 +48,9 @@
   }
 
   @at-root #{$this}--small {
-    @include g.clamp(padding-top, 10, 10);
+    @include g.clamp(padding-top, 10, 8);
     @include g.clamp(padding-right, 24, 12);
-    @include g.clamp(padding-bottom, 10, 10);
+    @include g.clamp(padding-bottom, 10, 8);
     @include g.clamp(padding-left, 24, 12);
     border-radius: 4px;
 

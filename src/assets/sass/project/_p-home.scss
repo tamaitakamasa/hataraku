@@ -3,7 +3,7 @@
 @use "../global"as g;
 
 .box {
-	display: none;
+  display: none;
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -16,7 +16,7 @@
   &-concept {
     @include g.mq(md) {
       .c-container {
-				width: 100%;
+        width: 100%;
         margin: 0;
       }
     }
@@ -53,7 +53,7 @@
 
       @include g.mq(md) {
         width: 100%;
-				align-items: flex-start;
+        align-items: flex-start;
       }
     }
 
@@ -68,7 +68,7 @@
       writing-mode: vertical-rl;
 
       @include g.mq(md) {
-				padding-top: 30px;
+        padding-top: 150px;
         padding-bottom: 0;
       }
     }
@@ -157,6 +157,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        @include g.mq(md) {
+          object-fit: contain;
+        }
       }
     }
   }
@@ -168,29 +172,34 @@
     &__header {
       display: flex;
       justify-content: center;
-      @include g.clamp(padding-top, 150, 75);
-      @include g.clamp(padding-bottom, 150, 75);
+      @include g.clamp(padding-top, 150, 90);
+      @include g.clamp(padding-bottom, 150, 10);
     }
 
-    &__title {}
+    &__title {
+      @include g.mq(md) {
+        writing-mode: vertical-rl;
+      }
+    }
 
     &__items {
       margin-right: g.$container-margin;
       margin-left: g.$container-margin;
       padding-bottom: 50vh;
 
-			@include g.mq(md) {
-				margin-right: g.$container-margin-narrow;
-				margin-left: g.$container-margin-narrow;
-				padding-bottom: 0;
-			}
+      @include g.mq(md) {
+        margin-right: g.$container-margin-narrow;
+        margin-left: g.$container-margin-narrow;
+        padding-bottom: 0;
+      }
     }
 
     &__item {
+
       // margin-top: 150px;
-			@include g.mq(md) {
-				@include g.clamp(margin-top, 60, 30, "md", "xs");
-			}
+      @include g.mq(md) {
+        @include g.clamp(margin-top, 50, 30, "md", "xs");
+      }
     }
   }
 
@@ -198,7 +207,7 @@
   &-eyecatch {
     // margin-top: 1500px;
     position: relative;
-    @include g.clamp(padding-top, 150, 75);
+    // @include g.clamp(padding-top, 150, 75);
 
     &::before {
       content: "";
@@ -208,6 +217,10 @@
       height: 50%;
       background-color: #ede8e1;
       z-index: -1;
+    }
+
+    @include g.mq(md) {
+      padding-top: 50px;
     }
 
     figure {
@@ -225,7 +238,7 @@
   &-profile {
     display: flex;
     align-items: center;
-    @include g.clamp(padding-top, 150, 75);
+    @include g.clamp(padding-top, 150, 50);
     @include g.clamp(padding-bottom, 150, 75);
     background-color: #ede8e1;
 
@@ -234,11 +247,10 @@
     }
 
     &__image {
-      // width: 50%;
-      width: 562px;
-      height: 780px;
+      width: 40%;
+      max-width: 600px;
       padding-right: 2vw;
-      aspect-ratio: 675 / 780;
+      aspect-ratio: 562 / 780;
 
       @include g.mq(md) {
         width: 60%;
@@ -255,8 +267,8 @@
     }
 
     &__body {
-      // width: 50%;
-      width: calc(100% - 562px);
+      width: 60%;
+      max-width: 1000px;
       padding-right: g.$container-margin;
       padding-left: 2vw;
 
@@ -276,17 +288,17 @@
 
       @include g.mq(md) {
         justify-content: center;
-        margin-top: 30px;
+        margin-top: 20px;
       }
 
       &-title {
         @include g.clamp(margin-right, 16, 12);
-        @include g.font-clamp("md", "sm");
+        @include g.font-clamp("md", "xs");
         letter-spacing: 0.3em;
       }
 
       &-name {
-        @include g.font-clamp("4xl", "2xl");
+        @include g.font-clamp("4xl", "lg");
         letter-spacing: 0.075em;
       }
     }

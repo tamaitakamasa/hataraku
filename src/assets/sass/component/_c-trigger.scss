@@ -1,6 +1,6 @@
 // component/_c-trigger.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 // Variables
 $trigger-height: 36px;
@@ -30,6 +30,10 @@ $translate-x: ($trigger-line-width + $trigger-line-spacing);
     @include g.mq(lg) {
       // width: $trigger-width * 0.5;
       // height: ($trigger-line-height * 3 + $trigger-line-spacing * 2) * 0.5;
+    }
+
+    @include g.mq(md) {
+      height: 34px;
     }
   }
 
@@ -64,6 +68,7 @@ $translate-x: ($trigger-line-width + $trigger-line-spacing);
     // }
 
     @at-root .c-trigger--active & {
+
       // Styles for when the trigger is active (menu open)
       &:nth-child(1) {
         transform: translateX($translate-x) rotate(300deg);
