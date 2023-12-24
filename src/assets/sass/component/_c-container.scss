@@ -5,4 +5,10 @@
 .c-container {
 	width: min(100% - 2rem, 70rem);
   margin-inline: auto;
+
+	&--full {
+		width: 100%;
+		padding-left: 5vw;
+		padding-right: 5vw;
+	}
 }

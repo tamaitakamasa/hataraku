@@ -33,7 +33,7 @@
 			}
 
       @include g.mq(md) {
-        width: 80px;
+        width: 80px !important;
       }
     }
   }
