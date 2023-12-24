@@ -75,7 +75,7 @@
 	<?php wp_body_open(); ?>
 	<div class="l-container">
 		<header class="l-header">
-			<div class="c-container">
+			<div class="c-container c-container--full">
 				<h1 class="l-header__logo">
 					<a href="<?php echo home_url() ?>">
 						<figure>
@@ -106,10 +106,29 @@
 		<!-- .l-header -->
 
 		<div class="l-drawer">
-			<ul>
-				<li><a href="<?php echo home_url() ?>#feature">「未来を育てる焼き芋」がみなさんの元に届くまで</a></li>
-				<li><a href="<?php echo home_url() ?>#product">商品一覧</a></li>
-				<li><a href="<?php echo home_url() ?>#news">お知らせ</a></li>
-			</ul>
+			<div class="l-drawer-inner">
+				<ul class="l-drawer__navi-main">
+					<li>
+						<a href="<?php echo home_url() ?>/#feature">「未来を育てる焼き芋」が<br>みなさんの元に届くまで</a>
+					</li>
+					<li><a href="<?php echo home_url() ?>/#product">商品一覧</a></li>
+					<li><a href="<?php echo home_url() ?>/#news">お知らせ</a></li>
+				</ul>
+				<div class="l-drawer__navi-subbody">
+					<ul class="l-drawer__navi-sub">
+
+						<li><a href="<?php echo home_url() ?>/privacy-policy">プライバシーポリシー</a></li>
+						<li><a href="<?php echo home_url() ?>/contact">お問い合わせ</a></li>
+					</ul>
+					<ul class="l-drawer__navi-sns">
+						<li>
+							<a href="https://www.instagram.com/hataraku_official/"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/farm.hataraku"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 		<!-- .l-drawer -->

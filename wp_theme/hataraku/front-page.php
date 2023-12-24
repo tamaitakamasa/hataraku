@@ -16,10 +16,10 @@
 get_header();
 ?>
 
-<div class="l-contents">
+<div class="l-contents p-home">
 	<div class="l-contents__body">
 		<div class="p-home-concept">
-			<div class="c-container">
+			<div class="c-container c-container--full">
 				<div class="p-home-concept__cols">
 					<div class="p-home-concept__col-left">
 						<h1 class="p-home-concept__title">
@@ -39,7 +39,7 @@ get_header();
 						<figure class="p-home-concept__image2">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/concept01.webp" />
 						</figure>
-						<div class="p-home-concept__text">
+						<div class="p-home-concept__text js-fadeup">
 							<p>
 								大切な人、好きな町<br />
 								全ての未来を育てる存在になりたい。<br />
@@ -70,7 +70,7 @@ get_header();
 
 		<div class="p-home-feature">
 			<div class="p-home-feature__header">
-				<div class="p-home-feature__title">
+				<div class="p-home-feature__title js-fadeup">
 					<h2 class="c-heading">
 						「未来を育てる焼き芋」が<br />みなさんの元に届くまで
 					</h2>
@@ -96,7 +96,7 @@ get_header();
 				<div class="p-home-feature__item">
 					<div class="c-feature">
 						<div class="c-feature__body">
-							<div class="c-feature__title">一本一本、手作業で栽培</div>
+							<div class="c-feature__title">一本一本、<br />手作業で栽培</div>
 							<div class="c-feature__description">
 								5月にさつまいもの苗を一本一本手作業で植え付け、収穫できるようになるのは10月になってから。<br />
 								畑楽では紅はるかを栽培していて、自然の恵みをたっぷりと受けた味わいは非常に濃厚です。様々な農家さんから学んだ育て方を畑楽の土地で実践するなど、試行錯誤の末に“本当に美味しい”と思うものになりました。
@@ -113,9 +113,7 @@ get_header();
 				<div class="p-home-feature__item">
 					<div class="c-feature">
 						<div class="c-feature__body">
-							<div class="c-feature__title">
-								素材本来の味を引き出す貯蔵熟成
-							</div>
+						<div class="c-feature__title">素材本来の味を<br />引き出す貯蔵熟成</div>
 							<div class="c-feature__description">
 								「どうすれば美味しい焼き芋になるのか」をとことん追求し、栽培や焼成だけでなく貯蔵熟成にもこだわっています。
 								さつまいも本来の味を引き出すために最適な環境は、これまで湿度や温度を何度も微調整したことで、ようやく見つけられました。
@@ -133,9 +131,7 @@ get_header();
 				<div class="p-home-feature__item">
 					<div class="c-feature">
 						<div class="c-feature__body">
-							<div class="c-feature__title">
-								ベストな状態を見極めじっくり手焼き
-							</div>
+						<div class="c-feature__title">ベストな状態を<br />見極め<br />じっくり手焼き</div>
 							<div class="c-feature__description">
 								美味しい焼き芋を目指し、大小さまざまなさつまいもを2万本焼き、1,000本以上食べてきました。焼き芋を作る農家だからこそたどりついた、適切な焼き加減の見極め。<br />
 								中心温度まで管理して焼いているため、芯までしっかりと火が通っています。<br />
@@ -156,7 +152,7 @@ get_header();
 
 		<div class="p-home-eyecatch">
 			<div class="c-container">
-				<figure>
+				<figure class="js-fadeup-image">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eyecatch.webp" />
 				</figure>
 			</div>
@@ -165,7 +161,7 @@ get_header();
 		<!-- .p-home-eyecatch -->
 
 		<div class="p-home-profile">
-			<figure class="p-home-profile__image">
+			<figure class="p-home-profile__image js-fadeup-image">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/profile.webp" alt="" />
 			</figure>
 			<div class="p-home-profile__body">
@@ -173,14 +169,14 @@ get_header();
 					<span class="p-home-profile__name-title">農場長</span>
 					<span class="p-home-profile__name-name">内藤靖人</span>
 				</p>
-				<p class="p-home-profile__introduction">
+				<p class="p-home-profile__introduction js-fadeup">
 					みなさん、はじめまして！<br />
 					畑楽の代表・内藤靖人です。<br />
 					埼玉県で生まれ育ち、震災ボランティアを機に宮城県山元町へ移住しました。農業未経験で移住・就農してからは、たくさんの方に助けてもらい、今では栽培から提供までこだわりぬいた石焼き芋を販売しています。<br />
 					復興途中の山元町はまだまだ可能性を秘めた場所です。県外からのインターンシップ受け入れや移住サポートにも協力し、焼き芋を楽しんでもらうだけでなく、町や人のより良い未来を想いながら、畑で楽しく働いています。<br />
 					大切に育て、じっくりと手焼きした石焼き芋。ぜひ味わってみてください。
 				</p>
-				<p class="p-home-profile__history">
+				<p class="p-home-profile__history js-fadeup">
 					埼玉県生まれ。<br />
 					震災を機にボランティアで山元町を訪ねる。<br />
 					地元の人たちとともに行った復興の活動をする中で、町を好きになり移住。<br />
@@ -195,11 +191,11 @@ get_header();
 
 		<div class="p-home-product">
 			<div class="c-container c-container--narrow">
-				<div class="p-home-product__title">
+				<div class="p-home-product__title js-fadeup">
 					<h2 class="c-heading c-heading--vertical">商品一覧</h2>
 				</div>
 				<div class="p-home-product__body">
-					<div class="p-home-product__item-direct">
+					<div class="p-home-product__item-direct js-fadeup">
 						<?php if (have_rows('d_product', 'option')) : ?>
 							<?php while (have_rows('d_product', 'option')) : the_row(); ?>
 								<div class="c-product c-product--direct">
@@ -232,7 +228,7 @@ get_header();
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</div>
-					<div class="p-home-product__item-online">
+					<div class="p-home-product__item-online js-fadeup">
 						<?php if (have_rows('o_product', 'option')) : ?>
 							<?php while (have_rows('o_product', 'option')) : the_row(); ?>
 								<div class="c-product c-product--online">
@@ -271,7 +267,7 @@ get_header();
 		</div>
 		<!-- .p-home-product -->
 
-		<div class="p-home-news">
+		<div class="p-home-news js-fadeup">
 			<h2 class="p-home-news__title">
 				<span class="p-home-news__title-ja c-heading">お知らせ</span>
 				<span class="p-home-news__title-en">@hataraku_official</span>
