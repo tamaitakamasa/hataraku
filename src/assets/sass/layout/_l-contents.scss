@@ -9,6 +9,10 @@
 	padding-top: 150px;
 	@include g.clamp(padding-bottom, 150, 75);
 
+	@at-root :has(.p-home) & {
+		padding-bottom: 0;
+	}
+
   &__body {
     position: relative;
     z-index: 1;
