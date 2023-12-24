@@ -24,6 +24,7 @@
   @include g.mq(md) {
     margin-right: 15vw;
     margin-left: 15vw;
+    border-radius: 3px;
   }
 
   @at-root #{$this}--green {
@@ -38,12 +39,17 @@
     background-color: g.$color-main;
     border-radius: 8px;
 
+    @include g.mq(md) {
+      border-radius: 4px;
+    }
+
     @include g.mq(sm) {
       width: 100%;
       margin-right: 0;
       margin-left: 0;
       padding-right: 20px;
       padding-left: 20px;
+
     }
   }
 
@@ -57,6 +63,7 @@
     @include g.mq(md) {
       margin-right: 0;
       margin-left: 0;
+      border-radius: 3px;
     }
   }
 
@@ -92,7 +99,7 @@
 
   &__label {
     font-family: g.$font-dnp-shuei;
-    @include g.font-clamp("md", "sm");
+    @include g.font-clamp("md", "xs");
     font-weight: 600;
     color: g.$color-main;
     letter-spacing: 0.075em;

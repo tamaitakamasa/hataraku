@@ -253,8 +253,9 @@
       aspect-ratio: 562 / 780;
 
       @include g.mq(md) {
-        width: 60%;
+        width: 50%;
         height: auto;
+        padding-right: 0;
         // margin-right: 20vw;
         // margin-left: 20vw;
       }
@@ -288,7 +289,7 @@
 
       @include g.mq(md) {
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 15px;
       }
 
       &-title {
@@ -304,7 +305,7 @@
     }
 
     &__introduction {
-      @include g.clamp(margin-top, 65, 30);
+      @include g.clamp(margin-top, 65, 25);
       @include g.clamp(font-size, 15, 14);
       letter-spacing: 0.05em;
       line-height: 2;
@@ -342,6 +343,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-bottom: 50px;
       }
     }
 
@@ -378,7 +380,7 @@
     &__btn {
       display: flex;
       justify-content: center;
-      @include g.clamp(margin-top, 70, 35);
+      @include g.clamp(margin-top, 70, 45);
     }
   }
 
