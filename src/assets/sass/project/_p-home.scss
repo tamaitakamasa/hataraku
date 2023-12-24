@@ -39,9 +39,13 @@
       flex-direction: column;
       align-items: center;
       width: 50%;
+			padding-right: 10vw;
+			padding-left: 10vw;
 
       @include g.mq(md) {
         width: 100%;
+				padding-right: 0;
+				padding-left: 0;
       }
     }
 
@@ -50,10 +54,12 @@
       flex-direction: column;
       align-items: center;
       width: 50%;
+			padding-left: 90px;
 
       @include g.mq(md) {
         width: 100%;
         align-items: flex-start;
+				padding-left: 0;
       }
     }
 
@@ -84,9 +90,12 @@
         display: none;
 
         &--sp {
+					position: relative;
           display: block;
+					width: 60vw;
           margin-top: 20px;
-          margin-right: 40vw;
+          // margin-right: 40vw;
+					left: -5vw;
         }
       }
 
@@ -98,6 +107,7 @@
     }
 
     &__image2 {
+			width: 100%;
       aspect-ratio: 642 / 884;
 
       &--sp {
@@ -111,8 +121,9 @@
           position: relative;
           z-index: -1;
           top: -20px;
+					right: -5vw;
           display: block;
-          margin-left: 15vw;
+          // margin-left: 15vw;
         }
       }
 
@@ -167,8 +178,6 @@
 
   // .p-home-feature
   &-feature {
-    // display: none;
-
     &__header {
       display: flex;
       justify-content: center;
@@ -185,7 +194,7 @@
     &__items {
       margin-right: g.$container-margin;
       margin-left: g.$container-margin;
-      padding-bottom: 50vh;
+      padding-bottom: 10vh;
 
       @include g.mq(md) {
         margin-right: g.$container-margin-narrow;
@@ -195,10 +204,16 @@
     }
 
     &__item {
+			margin-top: min(40vh, 400px);
+			margin-bottom: min(40vh, 400px);
 
-      // margin-top: 150px;
+			&:first-of-type {
+				margin-top: 0;
+			}
+
       @include g.mq(md) {
         @include g.clamp(margin-top, 50, 30, "md", "xs");
+				margin-bottom: 0;
       }
     }
   }

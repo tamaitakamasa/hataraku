@@ -7,10 +7,8 @@
   display: flex;
   align-items: center;
   // min-height: 100vh;
-	// margin-top: 40vh;
-	// margin-bottom: 40vh;
-	margin-top: min(40vh, 400px);
-	margin-bottom: min(40vh, 400px);
+	// margin-top: min(40vh, 400px);
+	// margin-bottom: min(40vh, 400px);
 
   @include g.mq(md) {
     flex-direction: column-reverse;
@@ -75,6 +73,7 @@
       flex-direction: row;
       gap: 20px;
       min-width: 0;
+			margin-top: 30px;
     }
 
     img {

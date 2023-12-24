@@ -42,32 +42,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // ピン留めを適用するかどうかを判断する閾値（例：768ピクセル）
   const pinThreshold = 768;
 
-  // const objLayoutHeader = document.querySelector(".l-header");
-
-  // ScrollTrigger.create({
-  //   trigger: ".box",
-  //   start: "top center", //アニメーションが始まる位置を指定（トリガー要素の位置 画面の位置）
-  //   end: "bottom bottom", //アニメーションが終わる位置を指定（トリガー要素の位置 画面の位置）
-  //   toggleClass: "l-header--scrolled", //トリガー要素に指定したクラスを付与
-
-  //   onEnter: () => {
-  //     console.log("onEnter");
-  //   },
-  //   // onEnterBack: () => leftColumn.classList.add("c-feature__body--active"),
-  //   onLeave: () => {
-  //     console.log("onLeave");
-  //   },
-  //   // once: true, //一度だけ実行する
-  //   markers: true
-  // });
-
   // 各セクションに対してアニメーションを適用します
   const sections = document.querySelectorAll(".p-home-feature__item");
   sections.forEach((section, index) => {
     const leftColumn = section.querySelector(".c-feature__body");
     const rightImages = section.querySelectorAll(".c-feature__images img");
-    const leftColumnTitle = section.querySelector(".c-feature__title");
-    const leftColumnText = section.querySelector(".c-feature__text");
+    // const leftColumnTitle = section.querySelector(".c-feature__title");
+    // const leftColumnText = section.querySelector(".c-feature__text");
+    // leftColumn.style.opacity = 0;
 
     // 最後のセクションを判定
     const isLastSection = index === sections.length - 1;
@@ -89,26 +71,41 @@ document.addEventListener("DOMContentLoaded", (event) => {
         end: "bottom 300px", // アニメーションが終わる位置を指定（トリガー要素の位置 画面の位置）
         onEnter: () => {
           // console.log("enter!");
+          // gsap.to(leftColumn, {
+          //   duration: 1,
+          //   autoAlpha: 1
+          // });
         },
         onLeave: () => {
           gsap.to(leftColumn, {
-            duration: 0.3,
-            opacity: 0
+            duration: 0.8,
+            autoAlpha: 0
           });
           // console.log("leave!");
         },
         onEnterBack: () => {
           gsap.to(leftColumn, {
             duration: 1,
-            opacity: 1
+            autoAlpha: 1
           });
           // console.log("enterback!!");
-        },
-        markers: true
+        }
+        // markers: true
+      });
+
+      gsap.from(leftColumn, {
+        duration: 1.4,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: section,
+          start: "top center-=100" //アニメーションが始まる位置を指定（トリガー要素の位置 画面の位置）
+          // end: "bottom top",
+          // markers: true
+        }
       });
 
       rightImages.forEach((image, imageIndex) => {
-        const speed = imageIndex === 0 ? 150 : 80;
+        const speed = imageIndex === 0 ? 200 : 80;
         gsap.fromTo(
           image,
           {y: 0},
@@ -126,4 +123,55 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
     }
   });
+});
+
+// GSAPアニメーション
+const jsFadeUps = document.querySelectorAll(".js-fadeup");
+const jsFadeUpImages = document.querySelectorAll(".js-fadeup-image");
+
+jsFadeUps.forEach((jsFadeUp) => {
+  gsap.fromTo(
+    jsFadeUp,
+    {
+      autoAlpha: 0,
+      y: 10
+    },
+    {
+      autoAlpha: 1,
+      y: 0,
+      delay: 0.3,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: jsFadeUp,
+        start: "top bottom"
+        // markers: true,
+      }
+    }
+  );
+});
+
+jsFadeUpImages.forEach((jsFadeUpImg, index) => {
+  gsap.fromTo(
+    jsFadeUpImg,
+    {
+      autoAlpha: 0 //ここで初期状態を設定
+    },
+    {
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      delay: 0.2,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: jsFadeUpImg,
+        start: "top-=200 bottom",
+        end: "bottom top",
+        id: index + 1,
+        once: true,
+        toggleClass: {
+          targets: jsFadeUpImg,
+          className: "js-after"
+        }
+        // markers: true,
+      }
+    }
+  );
 });
