@@ -1,15 +1,16 @@
 // project/_p-home.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 .box {
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
-	background-color: red;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: red;
 }
 
 .p-home {
+
   // .p-home-concept
   &-concept {
     @include g.mq(md) {
@@ -167,25 +168,25 @@
       @include g.clamp(padding-bottom, 150, 75);
     }
 
-    &__title {
-    }
+    &__title {}
 
     &__items {
       margin-right: g.$container-margin;
       margin-left: g.$container-margin;
-			padding-bottom: 50vh;
+      padding-bottom: 50vh;
 
     }
 
-		&__item {
-			margin-top: 200px;
-		}
+    &__item {
+      // margin-top: 150px;
+    }
   }
 
   // .p-home-eyecatch
   &-eyecatch {
     // margin-top: 1500px;
     position: relative;
+    @include g.clamp(padding-top, 150, 75);
 
     &::before {
       content: "";
@@ -221,12 +222,15 @@
     }
 
     &__image {
-      width: 50%;
+      // width: 50%;
+      width: 562px;
+      height: 780px;
       padding-right: 2vw;
       aspect-ratio: 675 / 780;
 
       @include g.mq(md) {
         width: 60%;
+        height: auto;
         // margin-right: 20vw;
         // margin-left: 20vw;
       }
@@ -239,7 +243,8 @@
     }
 
     &__body {
-      width: 50%;
+      // width: 50%;
+      width: calc(100% - 562px);
       padding-right: g.$container-margin;
       padding-left: 2vw;
 
@@ -284,10 +289,12 @@
     &__history {
       @include g.clamp(margin-top, 65, 40);
       @include g.clamp(padding-top, 65, 40);
-      border-top: 1px solid rgba($color: #000000, $alpha: 0.4);
+      border-top: 1px solid #d0ccc6;
       font-size: g.$font-size-xs;
       color: g.$color-main;
       letter-spacing: 0.05em;
+      font-weight: 700;
+      line-height: 2.2;
     }
   }
 
@@ -335,7 +342,7 @@
         gap: 75px;
       }
 
-      & > div {
+      &>div {
         width: 50%;
 
         @include g.mq(md) {
@@ -372,8 +379,7 @@
       flex-direction: column;
       align-items: center;
 
-      &-ja {
-      }
+      &-ja {}
 
       &-en {
         @include g.clamp(margin-top, 40, 20);

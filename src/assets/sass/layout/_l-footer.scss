@@ -1,6 +1,6 @@
 // layout/_l-footer.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 .l-footer {
   $this: &;
@@ -19,8 +19,7 @@
     color: #6a3906;
   }
 
-  .c-container {
-  }
+  .c-container {}
 
   &__inner {
     display: flex;
@@ -34,7 +33,8 @@
   &__company {
     p {
       @include g.clamp(margin-top, 70, 35);
-      font-size: g.$font-size-xs;
+      // font-size: g.$font-size-xs;
+      font-size: 11px;
       text-align: center;
     }
   }
@@ -52,8 +52,9 @@
       display: flex;
       flex-direction: column;
       @include g.clamp(gap, 50, 35);
+      line-height: 1.4;
 
-      & > li {
+      &>li {
         font-family: g.$font-dnp-shuei;
         @include g.font-clamp("md", "sm");
         font-weight: 600;
@@ -62,14 +63,14 @@
     }
 
     &-sub {
-      & > ul {
+      &>ul {
         display: flex;
         @include g.clamp(gap, 20, 10);
         @include g.clamp(margin-bottom, 40, 30);
         @include g.font-clamp("xl", "lg");
       }
 
-      & > li {
+      &>li {
         font-family: g.$font-dnp-shuei;
         font-size: g.$font-size-sm;
         font-weight: 600;
@@ -79,7 +80,8 @@
   }
 
   &__copyright {
-    font-size: 1.1rem;
+    // font-size: 1.1rem;
+    font-size: 11px;
     text-align: right;
     letter-spacing: 0.075em;
   }

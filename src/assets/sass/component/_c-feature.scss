@@ -40,13 +40,14 @@
     @include g.font-clamp("4xl", "2xl");
     font-weight: 400;
     letter-spacing: 0.075em;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   &__description {
     @include g.clamp(margin-top, 60, 30);
     @include g.clamp(padding-right, 60, 30);
     @include g.font-clamp("md", "sm");
+    line-height: 2.2;
   }
 
   &__images {

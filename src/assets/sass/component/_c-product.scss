@@ -1,6 +1,6 @@
 // component/_c-product.scss
 
-@use "../global" as g;
+@use "../global"as g;
 
 .c-product {
   $this: &;
@@ -18,7 +18,8 @@
   &__cols {
     display: flex;
     align-items: center;
-    @include g.clamp(gap, 70, 35);
+    // @include g.clamp(gap, 70, 35);
+    @include g.clamp(gap, 40, 20);
 
     @include g.mq(md) {
       flex-direction: column;
@@ -82,7 +83,7 @@
   }
 
   &__title {
-    @include g.clamp(margin-top, 36, 28);
+    @include g.clamp(margin-top, 40, 28);
     font-family: g.$font-dnp-shuei;
     @include g.font-clamp("4xl", "2xl");
     font-weight: 400;
@@ -91,7 +92,7 @@
   }
 
   &__description {
-    @include g.clamp(margin-top, 36, 18);
+    @include g.clamp(margin-top, 40, 20);
     // font-family: g.$font-dnp-shuei;
     @include g.font-clamp("sm", "xs");
     font-weight: 400;
@@ -102,7 +103,7 @@
     a {
       // display: flex;
       // justify-content: center;
-      @include g.clamp(margin-top, 36, 24);
+      @include g.clamp(margin-top, 40, 24);
       // border: 1px solid g.$color-main;
       // border-radius: 10px;
       // color: g.$color-main;
