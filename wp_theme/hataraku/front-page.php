@@ -68,7 +68,7 @@ get_header();
 		</div>
 		<!-- .p-home-concept -->
 
-		<div class="p-home-feature">
+		<div id="feature" class="p-home-feature">
 			<div class="p-home-feature__header">
 				<div class="p-home-feature__title js-fadeup">
 					<h2 class="c-heading">
@@ -160,7 +160,7 @@ get_header();
 		</div>
 		<!-- .p-home-eyecatch -->
 
-		<div class="p-home-profile">
+		<div id="profile" class="p-home-profile">
 			<figure class="p-home-profile__image js-fadeup-image">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/profile.webp" alt="" />
 			</figure>
@@ -189,7 +189,7 @@ get_header();
 		</div>
 		<!-- .p-home-profile -->
 
-		<div class="p-home-product">
+		<div id="product" class="p-home-product">
 			<div class="c-container c-container--narrow">
 				<div class="p-home-product__title js-fadeup">
 					<h2 class="c-heading c-heading--vertical">商品一覧</h2>
@@ -267,7 +267,7 @@ get_header();
 		</div>
 		<!-- .p-home-product -->
 
-		<div class="p-home-news js-fadeup">
+		<div id="news" class="p-home-news js-fadeup">
 			<h2 class="p-home-news__title">
 				<span class="p-home-news__title-ja c-heading">お知らせ</span>
 				<span class="p-home-news__title-en">@hataraku_official</span>
