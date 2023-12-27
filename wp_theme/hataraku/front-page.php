@@ -277,7 +277,7 @@ get_header();
 				<div class="elfsight-app-4797f1bb-db18-4f0e-b3d7-b8330216c2b7" data-elfsight-app-lazy></div>
 			</div>
 			<div class="p-home-news__btn">
-				<a class="c-btn c-btn--large" href="#">
+				<a class="c-btn c-btn--large" href="https://www.instagram.com/hataraku_official">
 					<span class="c-btn__icon"><i class="fa-brands fa-instagram"></i></span>
 					<span class="c-btn__label">INSTAGRAM</span>
 				</a>
