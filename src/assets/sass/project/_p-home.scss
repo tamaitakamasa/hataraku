@@ -293,8 +293,13 @@
     @include g.clamp(padding-bottom, 150, 75);
     background-color: #ede8e1;
 
+    @include g.mq(lg) {
+      align-items: normal;
+    }
+
     @include g.mq(md) {
       flex-direction: column;
+      align-items: center;
     }
 
     &__image {
@@ -356,7 +361,7 @@
     }
 
     &__introduction {
-      @include g.clamp(margin-top, 65, 25);
+      @include g.clamp(margin-top, 40, 25);
       @include g.clamp(font-size, 15, 14);
       letter-spacing: 0.05em;
       line-height: 2;
