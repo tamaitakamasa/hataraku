@@ -85,7 +85,7 @@
 				</h1>
 				<div class="l-header__navi">
 					<div class="l-header__btn-shop">
-						<a class="c-btn c-btn--small" href="#">
+						<a class="c-btn c-btn--small" href="https://hata-raku.stores.jp">
 							<span class="c-btn__icon"><i class="fa-light fa-cart-shopping"></i></span>
 							<span class="c-btn__label">ONLINE SHOP</span>
 						</a>

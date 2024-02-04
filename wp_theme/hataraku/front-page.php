@@ -256,7 +256,7 @@ get_header();
 						<?php endif; ?>
 					</div>
 					<div class="p-home-product__btn">
-						<a class="c-btn c-btn--large" href="#">
+						<a class="c-btn c-btn--large" href="https://hata-raku.stores.jp">
 							<span class="c-btn__icon"><i class="fa-light fa-cart-shopping"></i></span>
 							<span class="c-btn__label">公式ONLINE SHOP</span>
 						</a>
